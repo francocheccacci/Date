@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Días</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <script src="./index.js"></script>
+  </head>
+<body>
+  
+  <script>
+   $(document).ready(function(){
+  // Inicializa el datepicker para la fecha inicial
+  $('#datepicker-ini').datepicker({
+    format: 'yyyy-mm-dd',  // Formato de la fecha
+    autoclose: true,
+    timezone: 'America/Argentina/Buenos_Aires',
+    language: 'es',  // Cierra automáticamente el datepicker al seleccionar una fecha
+  });
+
+  // Inicializa el datepicker para la fecha final
+  $('#datepicker-fin').datepicker({
+    format: 'yyyy-mm-dd',  // Formato de la fecha
+    autoclose: true,
+    timezone: 'America/Argentina/Buenos_Aires',
+    language: 'es',  // Cierra automáticamente el datepicker al seleccionar una fecha
+  });
+});
+  </script>
+ <div class="container">
+  <div class="d-flex-btn">
+    <nav class="nav px-3 py-2 blur bg-black-30">
+      <a onclick="changeActive(event, 'fechas')" class="nav-item active">Diferencia entre fechas</a>
+      <a onclick="changeActive(event, 'dias')" class="nav-item">Diferencia entre días y fecha</a>
+    </nav>
+  </div>
+</div>
+
+<div class="container">
+  <div class="d-flex-btn pb-4">
+    <div class="contenedor">
+      <div class="row p-2">
+        <div class="col-12">
+          <h1 class="h1-title text-uppercase">Días entre fechas</h1>
+          <!--
+          <h5 class="h5-title text-uppercase">para valen 💜</h5>
+          -->
+        </div>
+        <div class="col-12">
+          <div class="container mt-5">
+            <h3 class="h3-label">Fecha 1:</h3>
+            <div class="input-agru">
+              <input type="text" id="datepicker-ini" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="container mt-3">
+            <h3 class="h3-label" id="labelFecha2">Fecha 2:</h3>
+            <div class="input-agru">
+              <input type="text" id="datepicker-fin" class="form-control">
+              <input type="number" id="num-dias" class="form-control hidden">
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="d-flex-btn">
+            <button id="btn-sumar" onclick="calculate(event, 'sumar')" class="btn-cuenta hidden">Sumar</button>
+            <button id="btn-restar" onclick="calculate(event, 'restar')" class="btn-cuenta hidden">Restar</button>
+            <button id="btn-cuenta" onclick="calculate(event, 'dif-fechas')" class="btn-cuenta">Diferencia en Días</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 pt-3">
+          <h3 class="h3-label text-center">Resultado:</h3>
+          <div class="input-agru">
+            <input type="text" id="result" class="form-control input-resultado" >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="toast" class="toast align-items-center center-toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      Hola! ¿Como estas? Gracias por usarme 😄
+    </div>
+    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

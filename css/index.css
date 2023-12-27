@@ -1,0 +1,196 @@
+    body{
+      background: rgb(238,174,202);
+      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    }
+    .h1-title{
+      font-family: 'Montserrat',sans-serif;
+      font-weight: 900;
+      font-size: 35px;
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .h3-label{
+        margin-left:2%; 
+        padding:0;
+        font-size: 15px;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+    }
+    .h5-title{
+      font-family: 'Montserrat',sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+    }
+    /* Estilos personalizados para centrar verticalmente */
+   
+    .hidden{
+      display: none !important;
+    }
+    .contenedor {
+      width: 500px;
+      height: 500px;
+      background: rgba( 189, 16, 224, 0.2 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 7.5px );
+      -webkit-backdrop-filter: blur( 7.5px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    #datepicker {
+      background-color: #f0e8df; /* Color de fondo en un tono pastel */
+      border: 1px solid #e3d6c3; /* Borde en un tono ligeramente más oscuro */
+    }
+
+    /* Cambia el color de los días seleccionados */
+    #datepicker table tr td.active,
+    #datepicker table tr td.active:hover,
+    #datepicker table tr td.active.disabled,
+    #datepicker table tr td.active.disabled:hover {
+      background-color: red; /* Color de fondo para los días seleccionados */
+    }
+    .container label {
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 900;
+     position: absolute;
+     
+    }
+    .container input{
+      border-radius: 10px;
+      width: 100%;
+      padding-left: 5% !important;
+      font-family: 'Montserrat', sans-serif;
+      border: none;
+      text-align: center;
+    }
+
+    .container .form-control:focus{
+      box-shadow: 0 0 23px 0px rgba(0,0,0,0.3);
+    }
+    
+
+    .agrupador-menos{
+      display: flex;
+      align-items: flex-end;
+      align-content: flex-end;
+      justify-content: center;
+    }
+    .h1-menos{
+      margin: 0 auto !important;
+      font-family: 'Montserrat',sans-serif;
+      font-weight: 900;
+      font-size: 35px;
+      color: white;
+      text-align: center;
+    }
+    
+    .input-resultado{
+      width: auto !important;
+      margin: 0 auto;
+    }
+
+     .btn-cuenta{
+      width: auto;
+      background-color: white;
+      color: rgba( 189, 16, 224, 1 ) ;
+      border-radius: 10px;
+      border: none;
+      margin: 2% 2%!important;
+      padding: 8px;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+    .btn-cuenta:hover{
+      background-color:   rgba(148,187,233,1) ;
+      color: white;
+      box-shadow: 0 0 10px 0px rgba(0,0,0,0.3) ;
+    }
+
+    .d-flex-btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    /****** NAV **********/
+    .nav-item {
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #666666;
+      margin-right: 10px;
+      border: 1px solid transparent;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-item.active,
+    .nav-item:hover:not(.active) {
+      background: rgba( 189, 16, 224, 0.2 );
+      color: #666666;
+    }
+
+    .nav-item.active {
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      display: flex;
+      text-decoration: none;
+    }
+
+    .nav-link {
+      padding: 0;
+    }
+
+    .nav-link:hover {
+      text-decoration: none;
+    }
+
+    .toast{
+      background-color:  rgba( 0, 0, 0, 0.5 ) !important;
+      color: white !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      width: auto !important;
+    }
+
+    .center-toast {
+      position: fixed;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1050; /* Asegura que el Toast esté por encima del contenido */
+      animation: top ease-in-out 2s;
+      box-shadow: 0px 0px 10px 0px black;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+     
+    }
+    
+    .toast.hide {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+
+    }
+
+    .toast-error{
+      background-color: rgba(255,0,0,0.5) !important;
+      
+    }
