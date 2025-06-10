@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">Date es una aplicación para calcular diferencia entre fechas, esta aplicacion es de escritorio realizada con HTML, CSS, Javascript y para finalizar uticé Electron, una libreria de Js, la cual me permite crear apartir de una web una aplicación para Desktop.</p>
+<p align="left">Date es una aplicación para calcular diferencia entre fechas, esta aplicacion es de escritorio realizada con HTML, CSS, Javascript y para finalizar utilicé Electron, una libreria de Js, la cual me permite crear apartir de una web una aplicación para Desktop.</p>
 
 ###
 
